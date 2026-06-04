@@ -1,0 +1,10 @@
+{
+  "name": "agriintel-backend",
+  "version": "1.0.0",
+  "description": "Simple Node backend for AgriIntel single-page frontend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}

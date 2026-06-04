@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgriIntel | AI-Powered Agricultural Market Intelligence</title>
+  <meta name="description" content="AgriIntel delivers market intelligence, weather advisory, government scheme discovery, and crop insights through an AI-driven agriculture dashboard." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <div class="page-shell">
+    <header class="topbar fade-in-down">
+      <div class="brand-group">
+        <div class="brand-mark"></div>
+        <div>
+          <span class="logo">AgriIntel</span>
+          <span class="logo-tag">AI Market Intelligence</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#insights">Insights</a>
+        <a href="#insights" class="nav-cta">Open Dashboard</a>
+      </nav>
+      <div class="top-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        <button class="cta-btn secondary" onclick="showToast('Welcome to AgriIntel — your market edge.')">Get Started</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section hero-surface">
+        <div class="hero-copy fade-in-up delay-1">
+          <span class="eyebrow">Intelligent agriculture for modern farms</span>
+          <h1>AI-Powered Agricultural Market Intelligence</h1>
+          <p>Empowering farmers with market insights, crop trends, government schemes, and intelligent decision support.</p>
+          <div class="hero-actions">
+            <a href="#insights" class="cta-btn">Get Started</a>
+            <button class="ghost-btn" onclick="showToast('Demo video coming soon!')">Watch Demo</button>
+          </div>
+          <div class="hero-highlights">
+            <div><strong>24/7</strong> Crop intelligence</div>
+            <div><strong>120+</strong> Market sources</div>
+            <div><strong>3,500+</strong> farmers onboarded</div>
+          </div>
+        </div>
+        <div class="hero-visual fade-in-up delay-2" aria-hidden="true">
+          <div class="visual-card glass-card">
+            <div class="sun"></div>
+            <div class="horizon"></div>
+            <div class="plant"></div>
+            <div class="wave wave-1"></div>
+            <div class="wave wave-2"></div>
+            <div class="wave wave-3"></div>
+            <div class="float-badge badge-1">Market Alerts</div>
+            <div class="float-badge badge-2">Weather Advisory</div>
+            <div class="float-badge badge-3">Scheme Finder</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stats-section" id="insights">
+        <div class="section-heading">
+          <span class="eyebrow">Performance at a glance</span>
+          <h2>Trusted intelligence for farm decision makers</h2>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card glass-card slide-up">
+            <span class="stat-label">Farmers Supported</span>
+            <span class="stat-value" data-target="3520">0</span>
+          </article>
+          <article class="stat-card glass-card slide-up delay-1">
+            <span class="stat-label">Market Reports Analyzed</span>
+            <span class="stat-value" data-target="18740">0</span>
+          </article>
+          <article class="stat-card glass-card slide-up delay-2">
+            <span class="stat-label">Government Schemes Indexed</span>
+            <span class="stat-value" data-target="620">0</span>
+          </article>
+          <article class="stat-card glass-card slide-up delay-3">
+            <span class="stat-label">Crop Categories</span>
+            <span class="stat-value" data-target="48">0</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section features-section" id="features">
+        <div class="section-heading">
+          <span class="eyebrow">Capabilities</span>
+          <h2>Everything farmers need in one intelligent platform</h2>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card glass-card hover-glow fade-in-up">
+            <div class="feature-icon">📈</div>
+            <h3>Market Intelligence</h3>
+            <p>Analyze crop prices across markets and optimize selling decisions.</p>
+          </article>
+          <article class="feature-card glass-card hover-glow fade-in-up delay-1">
+            <div class="feature-icon">🧾</div>
+            <h3>Government Scheme Discovery</h3>
+            <p>Find relevant agricultural schemes instantly with smart filtering.</p>
+          </article>
+          <article class="feature-card glass-card hover-glow fade-in-up delay-2">
+            <div class="feature-icon">📊</div>
+            <h3>Demand Forecasting</h3>
+            <p>Understand crop demand trends and future price signals.</p>
+          </article>
+          <article class="feature-card glass-card hover-glow fade-in-up">
+            <div class="feature-icon">☁️</div>
+            <h3>Weather Insights</h3>
+            <p>Weather-based agricultural recommendations for safer planning.</p>
+          </article>
+          <article class="feature-card glass-card hover-glow fade-in-up delay-1">
+            <div class="feature-icon">📚</div>
+            <h3>Agricultural Reports Analysis</h3>
+            <p>Convert lengthy reports into concise, actionable insights.</p>
+          </article>
+          <article class="feature-card glass-card hover-glow fade-in-up delay-2">
+            <div class="feature-icon">🤖</div>
+            <h3>AI Farming Assistant</h3>
+            <p>Ask agricultural questions in natural language and get guidance.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section schemes-section" id="schemes">
+        <div class="section-heading">
+          <span class="eyebrow">Policy support</span>
+          <h2>Backend-powered scheme recommendations</h2>
+        </div>
+        <div class="scheme-panel glass-card">
+          <div class="scheme-toolbar">
+            <p class="scheme-intro">Live scheme data is loaded from the backend API. Search by name or status.</p>
+            <input id="schemeSearch" type="search" placeholder="Search schemes" />
+          </div>
+          <div class="scheme-grid" id="schemeGrid"></div>
+        </div>
+      </section>
+
+      <section class="section assistant-section" id="assistant">
+        <div class="section-heading">
+          <span class="eyebrow">AI assistant</span>
+          <h2>Chat with AgriIntel backend</h2>
+        </div>
+        <div class="assistant-panel glass-card">
+          <div class="assistant-banner">Ask AgriIntel about crop pricing, scheme eligibility, or market timing.</div>
+          <div class="chat-window" id="chatWindow">
+            <div class="chat-message bot"><p>Hi! Ask me about market signals, crop support, or weather-aware farming tips.</p></div>
+          </div>
+          <form id="chatForm" class="chat-form">
+            <input id="chatInput" type="text" placeholder="Ask a question..." autocomplete="off" />
+            <button type="submit" class="cta-btn">Send</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section workflow-section" id="how-it-works">
+        <div class="section-heading">
+          <span class="eyebrow">How it works</span>
+          <h2>Insight generation in five intelligent steps</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item fade-in-up">
+            <span class="timeline-step">1</span>
+            <h3>Collect Agricultural Data</h3>
+            <p>Integrate market feeds, weather signals, policy updates, and crop reports.</p>
+          </div>
+          <div class="timeline-item fade-in-up delay-1">
+            <span class="timeline-step">2</span>
+            <h3>Process Knowledge Sources</h3>
+            <p>Cleanse and unify data from government, market, and climate sources.</p>
+          </div>
+          <div class="timeline-item fade-in-up delay-2">
+            <span class="timeline-step">3</span>
+            <h3>Retrieve Relevant Information</h3>
+            <p>Surface the best market signals for your crop and location.</p>
+          </div>
+          <div class="timeline-item fade-in-up delay-3">
+            <span class="timeline-step">4</span>
+            <h3>Analyze Market Intelligence</h3>
+            <p>Compare prices, demand, and weather impact across regions.</p>
+          </div>
+          <div class="timeline-item fade-in-up delay-4">
+            <span class="timeline-step">5</span>
+            <h3>Generate Recommendations</h3>
+            <p>Receive actionable guidance, pricing alerts, and scheme eligibility.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-panel glass-card fade-in-up delay-1">
+        <div>
+          <h2>Ready to grow smarter with AgriIntel?</h2>
+          <p>Start using AI-powered agricultural intelligence designed for modern farms and agribusiness.</p>
+        </div>
+        <div class="cta-panel-actions">
+          <a href="#features" class="cta-btn">Launch Dashboard</a>
+          <a href="#assistant" class="ghost-btn">Explore AI Assistant</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer fade-in-up delay-2">
+      <div class="footer-brand">
+        <span class="logo">AgriIntel</span>
+        <p>Modern agricultural market intelligence for resilient farms.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#insights">Dashboard</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="mailto:hello@agriintel.ai">hello@agriintel.ai</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <button class="floating-assistant" onclick="showToast('AgriIntel Assistant is ready to help!')" aria-label="Open AI assistant">
+    <span>AI</span>
+  </button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
